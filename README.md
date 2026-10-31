@@ -1,0 +1,2 @@
+# Ders_7-prompt-istem
+ALPTEMOÇİN-BEKLER EĞİTİM VE ENDÜSTRİYEL GELİŞİM VAKFI
