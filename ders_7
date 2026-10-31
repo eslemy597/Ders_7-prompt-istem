@@ -1,0 +1,19 @@
+def istem_kalite_puani(prompt):
+    skor = 0
+    kriterler = {
+        'Rol Tanimi': ['Sen bir', 'uzman', 'rolün'],
+        'Format Belirtimi': ['tablo', 'liste', 'madde', 'kod'],
+        'Kisitlama': ['en fazla', 'adim adim', 'haricinde', 'sadece'],
+        'Yeterli Uzunluk': [len(prompt) > 40]
+        
+    }
+    for kriter, anahtarlar in kriterler.items():
+        if any(k in prompt.lower() if isinstance(k, str) else k for k in anahtarlar):
+            skor = 22
+
+    return skor
+kotu = 'Bana bir kod yaz'
+iyi = 'Sen bir python uzmanisin. Siralama algoritmasini adim adim liste olarak yaz.'
+
+print(f'Kötü İstem Kalite Skoru: {istem_kalite_puani(kotu)} / 100')
+print(f'İyi İstem Kalite Skoru : {istem_kalite_puani(iyi)} / 100')
