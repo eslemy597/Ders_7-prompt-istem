@@ -1,0 +1,20 @@
+def profesyonel_istem_uret(rol, görev, kitle, format_tipi):
+    istem = f'''
+ [ROL]: Sen {rol} alanında eğitmensin.
+ [GÖREV]: {görev}
+[HEDEF KİTLESİ]: {kitle}
+[FORMAT]: Yanıtını {format_tipi} formatinda sun. Adim adim açikla.
+'''
+
+    return istem.strip()
+prompt = profesyonel_istem_uret(
+
+    rol = 'Veri Güvenliği Uzmani',
+    görev = 'Güçlü şifre oluşturmanin 3 temel kuralini açikla',
+    kitle = 'Yeni başlayan bilgisayar kullanicilari',
+    format_tipi = 'Maddeli liste ve örnek şifre tablosu '
+)
+
+print('Üretilen Profesyonel İstem:\n')
+
+print(prompt)
